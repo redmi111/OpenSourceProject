@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="en">
+    <string name="app_name">spaRSS</string>
+    <string name="about_spaRSS">spaRSS Hakkında</string>
+    <string name="welcome_title">spaRSS\'ye hoşgeldin. Yeni bir besleme eklemek ister misin ?</string>
+    <string name="menu_settings">Ayarlar</string>
+    <string name="menu_refresh">Tazele</string>
+    <string name="menu_all_read">Tümünü okundu işaretle</string>
+    <string name="error">Hata</string>
+    <string name="loading">Yükleniyor…</string>
+    <string name="context_menu_delete">Sil</string>
+    <string name="context_menu_edit">Düzenle</string>
+    <string name="passwordhttpAuth">Parola</string>
+<string name="menu_add_group">Grup ekle</string>
+    <string name="tab_advanced_title">Gelişmiş</string>
+    <string name="feed_title">Başlık</string>
+    <string name="edit_group_title">Grup adı düzenle</string>
+    <string name="google_news_world">Dünya</string>
+    <string name="google_news_business">İş</string>
+    <string name="google_news_technology">Teknoloji</string>
+    <string name="google_news_sports">Spor</string>
+    <string name="google_news_science">Bilim</string>
+    <string name="google_news_health">Sağlık</string>
+    <string name="menu_full_screen">Tam ekran</string>
+    <string name="red">Kırmızı</string>
+    <string name="green">Yeşil</string>
+    <string name="blue">Mavi</string>
+    <string name="settings_proxy_wifi_only">Sadece Wi-Fi</string>
+    </resources>

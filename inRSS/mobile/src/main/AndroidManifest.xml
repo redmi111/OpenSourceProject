@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="social.news.inrss"
+          android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+
+    <permission
+        android:name="social.news.inrss.provider.WRITE_PERMISSION"
+        android:protectionLevel="signature"/>
+
+    <application
+        android:name="social.news.inrss.MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Light">
+        <service android:name="social.news.inrss.service.RefreshService"/>
+        <service android:name="social.news.inrss.service.FetcherService"/>
+
+        <provider
+            android:name="social.news.inrss.provider.FeedDataContentProvider"
+            android:authorities="social.news.inrss.provider.FeedData"
+            android:exported="true"
+            android:writePermission="social.news.inrss.provider.WRITE_PERMISSION"/>
+
+        <activity
+            android:name="social.news.inrss.activity.HomeActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="social.news.inrss.activity.AddGoogleNewsActivity"
+            android:label="@string/google_news_title"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name="social.news.inrss.activity.AboutActivity"
+            android:label="@string/about_spaRSS"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="about_activity_intent"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="social.news.inrss.activity.EditFeedsListActivity"
+            android:label="@string/feeds"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name="social.news.inrss.activity.EntryActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.spaRSS.entry"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="social.news.inrss.activity.GeneralPrefsActivity"
+            android:label="@string/menu_settings"
+            android:launchMode="singleTask"/>
+        <activity android:name="social.news.inrss.widget.WidgetConfigActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="social.news.inrss.activity.EditFeedActivity"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.spaRSS.feed"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.dir/vnd.spaRSS.feed"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="*" />
+                <data android:pathPattern=".*\\.xml" />
+                <data android:pathPattern=".*\\.rss" />
+                <data android:pathPattern=".*/feed" />
+                <data android:pathPattern=".*feed/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="feeds.feedburner.com" />
+                <data android:host="feedproxy.google.com" />
+                <data android:host="feeds2.feedburner.com" />
+                <data android:host="feedsproxy.google.com" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:mimeType="text/xml" />
+                <data android:mimeType="application/rss+xml" />
+                <data android:mimeType="application/rdf+xml" />
+                <data android:mimeType="application/atom+xml" />
+                <data android:mimeType="application/xml" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="feed" />
+                <data android:scheme="rss" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="social.news.inrss.widget.WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widgetinfo"/>
+        </receiver>
+
+        <receiver android:name="social.news.inrss.widget.TickerWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/tickerwidgetinfo"/>
+        </receiver>
+
+        <service
+            android:name="social.news.inrss.widget.WidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"/>
+
+        <service android:name="social.news.inrss.widget.TickerWidgetService"/>
+
+        <receiver android:name="social.news.inrss.receiver.BootCompletedBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="social.news.inrss.receiver.ConnectionChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="social.news.inrss.service.RefreshService$RefreshAlarmReceiver"/>
+    </application>
+
+</manifest>

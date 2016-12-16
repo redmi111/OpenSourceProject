@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+ Copyright (c) 2010-2012 Stefan Handschuh
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="en">
+
+    <!-- GENERAL -->
+    <string name="app_name">spaRSS</string>
+    <string name="about_spaRSS">Acerca de spaRSS</string>
+    <string name="welcome_title">Bienvenido a spaRSS. ¿Le gustaría agregar una fuente de contenidos?</string>
+    <string name="never">nunca</string>
+    <string name="update">Actualizar</string>
+    <string name="colon">:\u00A0</string>
+    <string name="menu_settings">Configuración</string>
+    <string name="menu_refresh">Actualizar</string>
+    <string name="menu_all_read">Marcar todo como leído</string>
+    <string name="spaRSS_feeds">Fuentes de spaRSS</string>
+    <string name="error">Error</string>
+    <string name="network_error">No se ha configurado la red</string>
+    <string name="loading">Cargando…</string>
+    <string name="no_result">Sin resultados</string>
+    <string name="drawer_open">Abrir el panel de navegación</string>
+    <string name="drawer_close">Cerrar el panel de navegación</string>
+    <string name="back_again_to_quit">Presione atrás une vez más para salir</string>
+
+    <!-- FEEDS -->
+    <string name="feeds">Fuentes</string>
+    <string name="menu_add_feed">Agregar fuente</string>
+    <string name="no_feeds">No hay fuentes</string>
+    <string name="no_filters">No hay filtros</string>
+    <string name="context_menu_delete">Eliminar</string>
+    <string name="edit_feed_title">Modificar fuente</string>
+    <string name="new_feed_title">Nueva fuente</string>
+    <string name="context_menu_edit">Editar</string>
+    <string name="menu_add_group">Añadir grupo</string>
+    <string name="menu_import">Importar desde OPML</string>
+    <string name="menu_export">Exportar a OPML</string>
+    <string name="error_feed_error">No hay conectividad a la dirección de la fuente.</string>
+    <string name="error_feed_process">No se ha podido procesar la fuente.</string>
+    <string name="error_feed_url_exists">Ya existe esta dirección.</string>
+    <string name="error_feed_import">No se ha podido importar el archivo seleccionado.</string>
+    <string name="error_feed_export">No se han exportado las fuentes. Compruebe los permisos en la tarjeta SD.</string>
+    <string name="error_external_storage_not_available">El almacenaje externo no está disponible.</string>
+    <string name="feed_url">URL</string>
+    <string name="optional">(opcional)</string>
+    <string name="website_or_feed">(página web o fuente)</string>
+    <string name="tab_feed_title">Fuente</string>
+    <string name="tab_filters_title">Filtros</string>
+    <string name="feed_title">Título</string>
+    <string name="feed_filters">Filtros de exclusión</string>
+    <string name="filter_add_title">Añadir filtro</string>
+    <string name="filter_delete_title">Eliminar filtro</string>
+    <string name="filter_edit_title">Editar filtro</string>
+    <string name="filter_is_regex">es una expresión regular</string>
+    <string name="filter_apply_to_title">Aplicar al título</string>
+    <string name="filter_apply_to_content">Aplicar al contenido</string>
+    <string name="accept">ACCEPT</string>
+    <string name="reject">REJECT</string>
+    <string name="feed_search">Buscar fuentes</string>
+    <string name="select_file">Seleccionar archivo</string>
+    <string name="question_delete_feed">¿Seguro que quiere eliminar esta fuente?</string>
+    <string name="question_delete_group">¿Seguro que quiere eliminar este grupo de fuentes?</string>
+    <string name="question_delete_filter">¿Seguro que quiere eliminar este filtro?</string>
+    <string name="add_group_title">Añadir nombre de grupo</string>
+    <string name="edit_group_title">Editar nombre de grupo</string>
+    <string name="message_exported_to">Exportar a %s.</string>
+    <string name="to_group_title">Mover la fuente</string>
+    <string name="to_group_message">Puede mover la fuente dentro o encima del grupo. ¿Qué desea hacer?</string>
+    <string name="to_group_above">Encima del grupo</string>
+    <string name="to_group_into">Al grupo</string>
+    <string name="add_custom_feed">Agregar una fuente personalizada o buscar una</string>
+    <string name="google_news_title">Temas de Google Noticias</string>
+    <string name="google_news_indicator">Seleccione uno o varios temas para agregar. Algunos de ellos podrían no estar disponibles en Google en su idioma.</string>
+    <string name="google_news_top_stories">Noticias destacadas</string>
+    <string name="google_news_world">Internacional</string>
+    <string name="google_news_business">Economía</string>
+    <string name="google_news_technology">Ciencia y Tecnología</string>
+    <string name="google_news_entertainment">Espectáculos</string>
+    <string name="google_news_sports">Deportes</string>
+    <string name="google_news_science">Ciencia</string>
+    <string name="google_news_health">Salud</string>
+
+    <!-- ENTRIES -->
+    <string name="all">Entradas</string>
+    <string name="no_entries">No hay entradas</string>
+    <string name="favorites">Destacadas</string>
+    <string name="context_menu_hide_read">Ocultar entradas leídas</string>
+    <string name="context_menu_show_read">Mostrar entradas leídas</string>
+    <string name="context_menu_share_starred">Compartir entradas seleccionadas</string>
+    <string name="menu_star">Destacar</string>
+    <string name="menu_unstar">No destacar</string>
+    <string name="menu_share">Compartir</string>
+    <string name="menu_full_screen">Pantalla completa</string>
+    <string name="menu_copy_clipboard">Copiar enlace</string>
+    <string name="menu_mark_as_unread">Marcar como no leído</string>
+    <string name="share_favorites_title">spaRSS: Entradas destacadas</string>
+    <string name="copied_clipboard">Enlace copiado</string>
+    <string name="get_full_text">Descargar el texto completo</string>
+    <string name="original_text">Mostrar el texto original</string>
+    <string name="see_enclosure">Ver el adjunto</string>
+    <string name="see_link">Ver en el navegador</string>
+    <string name="cant_open_link">No se ha encontrado una aplicación para este enlace</string>
+    <string name="open_enclosure">Abrir el adjunto</string>
+    <string name="file">Archivo</string>
+    <string name="download_and_save">Descargar y guardar</string>
+    <string name="open_link">Abrir el enlace</string>
+    <string name="tip_sentence">Tip: deslizar a la izquierda marca como leido y a la derecha para destacar</string>
+
+    <!-- WIDGET -->
+    <string name="red">Rojo</string>
+    <string name="green">Verde</string>
+    <string name="blue">Azul</string>
+    <string name="transparency">Transparencia</string>
+
+    <!-- SETTINGS -->
+    <string name="settings_category_refresh">Actualizaciones automáticas</string>
+    <string name="settings_refresh_enabled">Habilitar actualizaciones automáticas</string>
+    <string name="settings_refresh_enabled_description">Activa las actualizaciones automáticas de las fuentes</string>
+    <string name="settings_refresh_interval">Intervalo entre actualizaciones</string>
+    <string name="settings_category_notifications">Notificaciones</string>
+    <string name="settings_notifications_enabled">Habilitar notificaciones</string>
+    <string name="settings_notifications_enabled_description">Habilita las notificaciones de nuevas entradas</string>
+    <string name="settings_notifications_ringtone">Tono</string>
+    <string name="settings_notifications_ringtone_none">Ninguno</string>
+    <string name="settings_notifications_vibrate">Vibración</string>
+    <string name="settings_notifications_vibrate_description">Hará vibrar el terminal al recibir nuevas entradas</string>
+    <string name="settings_notifications_light">Luz</string>
+    <string name="settings_notifications_light_description">Mostrar notificación luminosa al encontrar nuevas entradas</string>
+    <string name="settings_category_content_presentation">Modo de presentación</string>
+    <string name="settings_light_theme">Tema claro</string>
+    <string name="settings_light_theme_description">Usar el tema claro</string>
+    <string name="settings_keep_time">Tiempo de retención de las entradas</string>
+    <string name="settings_display_images">Mostrar imágenes</string>
+    <string name="settings_display_images_description">Mostrar imágenes en las entradas</string>
+    <string name="settings_preload_image_mode">Precargar imágenes</string>
+    <string name="settings_font_size">Tamaño del texto</string>
+    <string name="settings_display_oldest_first">Orden de las entradas</string>
+    <string name="settings_display_oldest_first_description">Mostrar entradas mas antiguas primero</string>
+    <string name="settings_display_entries_fullscreen">Entradas en pantalla completa</string>
+    <string name="settings_display_entries_fullscreen_description">Mostrar las entradas en pantalla completa automáticamente</string>
+    <string name="settings_refresh_on_open">Actualizar las fuentes al inicio</string>
+    <string name="settings_refresh_on_open_description">Actualiza las fuentes al iniciar la aplicación</string>
+    <string name="settings_refresh_wifi_only">Actualizar solo en Wi-Fi</string>
+    <string name="settings_refresh_wifi_only_description">Solo se actualizarán las entradas cuando se esté conectado a una red Wi-Fi</string>
+    <string name="settings_visible_feeds">Visibilidad de las fuentes</string>
+    <string name="settings_widget_background">Fondo</string>
+    <string name="settings_widget_background_description">Color y transparencia del fondo del widget</string>
+    <string name="all_feeds">Todas las fuentes (incl. futuras)</string>
+    <string name="settings_screen_proxy">Proxy</string>
+    <string name="settings_category_network">Red</string>
+    <string name="settings_proxy_enabled">Habilitado</string>
+    <string name="settings_proxy_wifi_only">Solo en Wi-Fi</string>
+    <string name="settings_proxy_wifi_only_description">Utiliza el proxy solo mientras se esté
+        conectado a una red Wi-Fi.
+    </string>
+    <string name="settings_proxy_host">Máquina</string>
+    <string name="settings_proxy_port">Puerto</string>
+    <string name="settings_proxy_type">Tipo</string>
+
+    <plurals name="number_of_new_entries">
+	<item quantity="one">Una entrada nueva</item>
+	<item quantity="other">%d entradas nuevas</item>
+</plurals>
+
+    <string-array name="settings_intervals">
+        <item>1 minuto</item>
+        <item>5 minutos</item>
+        <item>15 minutos</item>
+        <item>30 minutos</item>
+        <item>1 hora</item>
+        <item>2 horas</item>
+        <item>6 horas</item>
+        <item>12 horas</item>
+        <item>1 día</item>
+    </string-array>
+    <string-array name="settings_keep_times">
+        <item>1 día</item>
+        <item>2 días</item>
+        <item>4 días</item>
+        <item>1 semana</item>
+        <item>2 semanas</item>
+        <item>1 mes</item>
+        <item>2 meses</item>
+        <item>3 meses</item>
+        <item>Infinito</item>
+    </string-array>
+    <string-array name="settings_font_sizes">
+        <item>-2</item>
+        <item>-1</item>
+        <item>Normal</item>
+        <item>+1</item>
+        <item>+2</item>
+        <item>+3</item>
+        <item>+4</item>
+        <item>+5</item>
+    </string-array>
+    <string-array name="settings_preload_image_modes">
+        <item>Never</item>
+        <item>Only over Wi-Fi</item>
+        <item>Always</item>
+    </string-array>
+
+<string name="menu_show_new_entries">Mostrar entradas nuevas</string>
+    <string name="feed_cookie">Cookie de autenticación</string>
+    <string name="tab_advanced_title">Avanzado</string>
+    <string name="menu_open_in_browser">Abrir en el navegador</string>
+    <string name="settings_mark_as_read">Mostrar botón Marcar todo como leído</string>
+    <string name="settings_mark_as_read_description">Mostrar / Ocultar el botón</string>
+    <string name="settings_show_new_entries">Mostrar entradas nuevas automáticamente</string>
+    <string name="settings_show_new_entries_description">Desactivar para requerir tocar el botón Mostrar nuevas entradas para mostrar nuevas entradas</string>
+    <string name="menu_switch_full_original">Mostrar contenido completo</string>
+    <string name="settings_left_panel">Panel de navegación</string>
+    <string name="settings_left_panel_description">Mostrar el panel de navegación al iniciar la aplicación</string>
+    <string name="cookiename">Nombre</string>
+    <string name="cookievalue">Valor</string>
+    <string name="settings_font_serif">Usar fuente Serif</string>
+    <string name="settings_font_serif_description">Usar fuente Serif en lugar de Sans-Serif en los artículos</string>
+    <string name="no_new_entries">Nada nuevo para mostrar</string>
+
+    <string name="feed_httpAuth">Autenticación HTTP</string>
+    <string name="passwordhttpAuth">Contraseña</string>
+    <string name="loginhttpAuth">Nombre de acceso</string>
+    <string name="filter_help">Ayuda de filtros</string>
+    <string name="storage_request_explanation">Para poder importar o exportar las fuentes desde o hacia un archivo, debes permitir que la aplicación acceda a la memoria de almacenamiento.</string>
+    <string name="google_news_custom_topic">Añade un tema de tu elección</string>
+
+    <string name="feed_no_summary">&lt; No hay resumen disponible. &gt;</string>
+    </resources>

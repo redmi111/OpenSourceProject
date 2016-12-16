@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="instal-publisher-sdk-1.0.24">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mobile/libs/instal-publisher-sdk-1.0.24.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

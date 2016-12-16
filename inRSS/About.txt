@@ -1,0 +1,18 @@
+Features:
+- New feeds on Google News or search features
+- It's very light
+- Offline reading with image and private news
+- Search and filter articles by keywords
+
+inRSS base on spaRSS Opensource, under GPLv3 license
+- Link source code here
+github.xxxx
+- spaRSS Opensource from here
+https://github.com/Etuldan/spaRSS
+
+Anh can sua
+- icon
+
+- can up source len github
+
+Warning:com.startapp.android.publish.i.a: can't find referenced class com.google.android.gms.ads.identifier.AdvertisingIdClient
