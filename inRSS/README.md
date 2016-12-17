@@ -28,5 +28,5 @@ It DOES NOT synchronize with any online feed reader.
 * custom widgets
 
 ### Links
-GitHub project: https://github.com/Etuldan/inRSS  
+GitHub project: https://github.com/thgunner/OpenSourceProject/tree/master/inRSS
 PlayStore: https://play.google.com/store/apps/details?id=social.news.inrss
