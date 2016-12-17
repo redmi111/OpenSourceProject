@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <com.note.docscan.views.TouchImageView
+            android:id="@+id/imgDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"/>
+        <com.note.docscan.ads.NativeStartApp
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/appnext1"
+            android:gravity="bottom|end"
+            android:layout_marginBottom="10dp">
+        </com.note.docscan.ads.NativeStartApp>
+
+    </LinearLayout>
+
+</RelativeLayout>
