@@ -1,16 +1,4 @@
 # inRSS
-QuickJump languages:  
-* [English](#english)  
-
-## English
-RSS reader with all articles content in app.
-
-Table of Contents
-* [Summary](#summary)
-* [Features](#features)
-* [Why inRSS ?] (#why-inRSS-)
-* [How to contribute ?](#how-to-contribute-)
-* [Links](#links)
 
 ### Summary
 inRSS is a light, modern, totally free (no ads) and opensource project which keeps you inform by fetching your websites/blogs and displaying them in a mobile-optimized way. It is based on the "Flym" RSS reader.  
