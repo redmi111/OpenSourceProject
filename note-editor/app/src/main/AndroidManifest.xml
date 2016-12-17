@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="note.dailywrite"
+    android:versionCode="1"
+    android:versionName="1.0.0">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <activity
+            android:name="note.dailywrite.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity android:name="com.startapp.android.publish.OverlayActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <activity android:name="note.dailywrite.NoteActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.EDIT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain"
+                    android:scheme="file"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/x-markdown"
+                    android:scheme="file" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="*"
+                    android:scheme="file"
+                    android:pathPattern="*.markdown"
+                    android:mimeType="*/*" />
+                <data
+                    android:host="*"
+                    android:scheme="file"
+                    android:pathPattern="*.md"
+                    android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="note.dailywrite.PreviewActivity"
+            android:label="@string/preview">
+        </activity>
+
+        <activity
+            android:name="note.dailywrite.settings.SettingsActivity"
+            android:label="@string/action_settings"
+            android:theme="@style/AppTheme.Light"
+            android:parentActivityName="note.dailywrite.MainActivity">
+        </activity>
+
+        <activity android:name="note.dailywrite.PinActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity android:name="note.dailywrite.AlphanumericPinActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity android:name="note.dailywrite.PromptPinActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="note.dailywrite.widget.WidgetConfigure">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="note.dailywrite.widget.WriteilyWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/writeily_widget" />
+        </receiver>
+
+        <service android:name="note.dailywrite.widget.FilesWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+    </application>
+
+</manifest>

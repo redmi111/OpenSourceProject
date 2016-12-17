@@ -1,0 +1,8 @@
+Note Editor is an easy note, you can write new notes and folder
+Organize by folders, save and access files from external storage
+
+It's is an opensource base on Writeily Pro Opensource, under MIT license
+-Our source code here
+
+- Writeily Pro source here
+https://github.com/plafue/writeily-pro

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="grey">#FFD700</color>
+    <color name="dark_grey">#FFDAB9</color>
+    <color name="light_grey">#ffC0C0C0</color>
+    <color name="lighter_grey">#ffE0E0E0</color>
+
+    <color name="primary">#FF69B4</color>
+    <color name="light_primary">#FF6347</color>
+    <color name="dark_primary">#FF1493</color>
+    <color name="secondary">#EF6C00</color>
+    <color name="light_secondary">#FF9800</color>
+</resources>
