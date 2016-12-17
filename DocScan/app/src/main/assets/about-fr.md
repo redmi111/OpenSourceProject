@@ -9,7 +9,7 @@ Cette application permet de numériser et enregistrer facilement des notes manus
 License
 -------
 
-Cette application est publiée sous la licence [GNU General Public License version 3](http://www.gnu.org/licenses/gpl.txt). Le code source de l'application [est diponible sur GitHub](http://github.com/ctodobom/OpenNoteScanner).
+Cette application est publiée sous la licence [GNU General Public License version 3](http://www.gnu.org/licenses/gpl.txt). Le code source de l'application [est diponible sur GitHub](https://github.com/thgunner/OpenSourceProject/tree/master/DocScan).
 
 
 Applications tierces et requises

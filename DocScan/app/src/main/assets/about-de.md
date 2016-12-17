@@ -9,7 +9,7 @@ Diese Anwendung bietet eine einfache Möglichkeit handgeschriebene Notizen und Z
 Lizenz
 -------
 
-Diese Anwendung steht unter der [GNU General Public License Version 3](http://www.gnu.org/licenses/gpl.txt). Der Quellcode ist [auf GitHub verfügbar](http://github.com/ctodobom/OpenNoteScanner).
+Diese Anwendung steht unter der [GNU General Public License Version 3](http://www.gnu.org/licenses/gpl.txt). Der Quellcode ist [auf GitHub verfügbar](https://github.com/thgunner/OpenSourceProject/tree/master/DocScan).
 
 
 Drittanbieter-Code und Anforderungen

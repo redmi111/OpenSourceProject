@@ -9,7 +9,7 @@ Tato aplikace poskytuje rychlý způsob pořízení a uložení vašich poznáme
 Licence
 -------
 
-Tato aplikace je volně přístupná díky [GNU General Public License version 3](http://www.gnu.org/licenses/gpl.txt). Zdrojový kód je [dostupný na GitHub](http://github.com/ctodobom/OpenNoteScanner).
+Tato aplikace je volně přístupná díky [GNU General Public License version 3](http://www.gnu.org/licenses/gpl.txt). Zdrojový kód je [dostupný na GitHub](https://github.com/thgunner/OpenSourceProject/tree/master/DocScan).
 
 Součásti třetích stran a požadavky
 ----------------------------------

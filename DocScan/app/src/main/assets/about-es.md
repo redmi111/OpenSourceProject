@@ -9,7 +9,7 @@ Esta aplicación proporciona una manera rápida de escanear y almacenar notas es
 Licencia
 --------
 
-Esta aplicación está disponible a traves de la [GNU General Public License version 3](http://www.gnu.org/licenses/gpl.txt). El código fuente está [disponible en GitHub](http://github.com/ctodobom/OpenNoteScanner).
+Esta aplicación está disponible a traves de la [GNU General Public License version 3](http://www.gnu.org/licenses/gpl.txt). El código fuente está [disponible en GitHub](https://github.com/thgunner/OpenSourceProject/tree/master/DocScan).
 
 
 Partes de terceros y requermientos
