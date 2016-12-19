@@ -1,0 +1,17 @@
+gradle.properties
+*.apk
+.DS_Store
+captures
+.idea/workspace.xml
+.idea/libraries/
+audiobook/build
+build
+.gradle/
+*~
+*.log
+local.properties
+MaterialAudiobookPlayer.iml
+.kobalt
+reports
+*.mp3
+.idea

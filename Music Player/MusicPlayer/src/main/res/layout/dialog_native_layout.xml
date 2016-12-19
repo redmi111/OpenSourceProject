@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/dialog_background"
+                android:id="@+id/dialog">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="30dp"
+                  android:paddingBottom="20dp"
+                  android:id="@+id/adsNative"
+                  android:layout_height="wrap_content">
+        <ImageView
+                android:id="@+id/iconApp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/home"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:padding="3dp"/>
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="title"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+            <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:text="description"
+                    android:maxLength="200"
+                    android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+            android:id="@+id/close_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/dialog_close"
+            android:text="×"
+            android:textColor="#9acd32"
+    />
+
+</RelativeLayout>

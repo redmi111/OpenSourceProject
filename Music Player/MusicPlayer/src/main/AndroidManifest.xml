@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.music.musicplayer135">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:name="com.music.musicplayer135.injection.App"
+        android:allowBackup="true"
+        android:backupAgent="com.music.musicplayer135.persistence.internals.CustomBackupAgent"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Music Player"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+
+        <!-- disabled due to compliance problems
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc"/>
+            -->
+
+        <!-- auto notification -->
+        <meta-data
+            android:name="com.google.android.gms.car.notification.SmallIcon"
+            android:resource="@drawable/ic_notification"
+            tools:ignore="ManifestResource"/>
+
+        <!-- auto capabilities -->
+        <meta-data
+            android:name="com.google.android.backup.api_key"
+            android:value="AEdPqrEAAAAIjeSB6A5JNJpRSV5yPq22PvZtl95fWDzDIuk63w"/>
+
+        <!-- auto theme -->
+        <meta-data
+            android:name="com.google.android.gms.car.application.theme"
+            android:resource="@style/Theme.AppCompat.DayNight"/>
+
+        <activity
+            android:name="com.music.musicplayer135.features.coldStart.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.music.musicplayer135.features.BookActivity"
+            android:label="@string/app_name"/>
+
+        <activity
+            android:name="com.music.musicplayer135.features.external_storage_missing.NoExternalStorageActivity"
+            android:label="@string/no_external_storage_action_bar_title"/>
+
+        <activity
+            android:name="com.music.musicplayer135.features.folder_chooser.FolderChooserActivity"
+            android:parentActivityName="com.music.musicplayer135.features.BookActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.music.musicplayer135.features.BookActivity"/>
+        </activity>
+
+        <service
+            android:name="com.music.musicplayer135.playback.PlaybackService"
+            android:exported="true"
+            tools:ignore="ExportedService">
+
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService"/>
+            </intent-filter>
+
+        </service>
+
+        <service android:name="com.music.musicplayer135.features.widget.WidgetUpdateService"/>
+
+        <receiver android:name="com.music.musicplayer135.playback.events.MediaEventReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.music.musicplayer135.features.widget.BaseWidgetProvider"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info"/>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,130 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply from: "../artifacts.gradle"
+
+android {
+
+    // dynamically pass 21 to the compiler for build speedup without losing lint warnings.
+    int minSdk = project.hasProperty('minSdk') ? minSdk.toInteger() : 16
+
+    compileSdkVersion 25
+    buildToolsVersion '25.0.1'
+    useLibrary  'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.music.musicplayer135"
+        minSdkVersion minSdk
+        targetSdkVersion 25
+        versionCode 1
+        versionName '1.0'
+
+        def acraServer = project.hasProperty("ACRA_SERVER") ? "\"$ACRA_SERVER\"" : "\"http://127.0.0.1/\""
+        buildConfigField("String", "ACRA_SERVER", acraServer)
+
+        def acraUser = project.hasProperty("ACRA_USER") ? "\"$ACRA_USER\"" : "\"user\""
+        buildConfigField("String", "ACRA_USER", acraUser)
+
+        def acraPassword = project.hasProperty("ACRA_PASSWORD") ? "\"$ACRA_PASSWORD\"" : "\"password\""
+        buildConfigField("String", "ACRA_PASSWORD", acraPassword)
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.pro'
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            applicationIdSuffix ".debug"
+        }
+    }
+
+    testOptions.unitTests.returnDefaultValues = true
+
+    lintOptions.abortOnError = false
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    // don't crunch images as we optimize them forehand
+    aaptOptions {
+        cruncherEnabled = false
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}
+
+dependencies {
+    // support library
+    def supportVersion = "25.0.1"
+    compile "com.android.support:appcompat-v7:$supportVersion"
+    compile "com.android.support:recyclerview-v7:$supportVersion"
+    compile "com.android.support:support-v4:$supportVersion"
+    compile "com.android.support:design:$supportVersion"
+    compile "com.android.support:transition:$supportVersion"
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    compile files('libs/NativeAdsSDK.jar')
+    compile files('libs/StartAppInApp-3.4.2.jar')
+    compile files('libs/instal-publisher-sdk-1.0.24.jar')
+    // image loading
+    compile "com.squareup.picasso:picasso:2.5.2"
+
+    // material styled dialogs
+    compile 'com.afollestad.material-dialogs:core:0.9.1.0'
+
+    // fab
+    compile "com.getbase:floatingactionbutton:1.10.1"
+
+    // dependency injection
+    def daggerVersion = "2.7"
+    compile "com.google.dagger:dagger:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    kaptAndroidTest "com.google.dagger:dagger-compiler:$daggerVersion"
+    provided "javax.annotation:jsr250-api:1.0"
+
+    //testing
+    testCompile "junit:junit:4.12"
+    testCompile "org.robolectric:robolectric:3.1"
+    testCompile "org.assertj:assertj-core:1.7.1"
+
+    // rx extensions
+    compile "io.reactivex.rxjava2:rxjava:2.0.2"
+    compile "io.reactivex.rxjava2:rxandroid:2.0.1"
+    compile 'com.github.akarnokd:rxjava2-interop:0.7.0'
+    compile 'com.f2prateek.rx.preferences:rx-preferences:1.0.2'
+
+    // kotlin
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
+    // player
+    compile 'com.google.android.exoplayer:exoplayer:r2.0.4'
+
+    // logs
+    compile 'com.github.PaulWoitaschek:Slimber:1.0.4'
+
+    // permissions
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.8.2@aar'
+
+    // crashes
+    compile "ch.acra:acra:4.9.1"
+
+    // conductor
+    def conductorVer = "2.0.4"
+    compile "com.bluelinelabs:conductor:$conductorVer"
+    compile "com.bluelinelabs:conductor-support:$conductorVer"
+    compile "com.bluelinelabs:conductor-rxlifecycle:$conductorVer"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.music.musicplayer135.ads.NativeAppNext
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/appnext1"
+        android:gravity="bottom">
+    </com.music.musicplayer135.ads.NativeAppNext>
+</LinearLayout>
